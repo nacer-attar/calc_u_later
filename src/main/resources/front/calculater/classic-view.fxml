@@ -1,16 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="front.calculater.FrontController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<VBox alignment="CENTER" spacing="2.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="front.calculater.FrontController">
+    <GridPane alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="50.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <VBox.margin>
+            <Insets/>
+        </VBox.margin>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
+        <Label fx:id="litExp" alignment="TOP_RIGHT" contentDisplay="RIGHT" textAlignment="RIGHT"
+               GridPane.columnSpan="2147483647"/>
+        <Button mnemonicParsing="false" onAction="#button1Clic" text="1" GridPane.halignment="CENTER"
+                GridPane.rowIndex="1" GridPane.valignment="CENTER"/>
+        <Button mnemonicParsing="false" onAction="#button2Clic" text="2" GridPane.columnIndex="1"
+                GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+        <Button mnemonicParsing="false" onAction="#button3Clic" text="3" GridPane.columnIndex="2"
+                GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+        <Button mnemonicParsing="false" onAction="#button4Clic" text="4" GridPane.halignment="CENTER"
+                GridPane.rowIndex="2"/>
+        <Button mnemonicParsing="false" onAction="#button5Clic" text="5" GridPane.columnIndex="1"
+                GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
+        <Button mnemonicParsing="false" onAction="#button6Clic" text="6" GridPane.columnIndex="2"
+                GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
+        <Button mnemonicParsing="false" onAction="#button7Clic" text="7" GridPane.halignment="CENTER"
+                GridPane.rowIndex="3"/>
+        <Button mnemonicParsing="false" onAction="#button8Clic" text="8" GridPane.columnIndex="1"
+                GridPane.halignment="CENTER" GridPane.rowIndex="3"/>
+        <Button mnemonicParsing="false" onAction="#button9Clic" text="9" GridPane.columnIndex="2"
+                GridPane.halignment="CENTER" GridPane.rowIndex="3"/>
+        <Button mnemonicParsing="false" onAction="#button0Clic" text="0" GridPane.columnIndex="1"
+                GridPane.halignment="CENTER" GridPane.rowIndex="4"/>
+        <Button mnemonicParsing="false" onAction="#buttonDotClic" text="." GridPane.halignment="CENTER"
+                GridPane.rowIndex="4"/>
+        <Button mnemonicParsing="false" text="=" GridPane.columnIndex="2" GridPane.halignment="CENTER"
+                GridPane.rowIndex="4"/>
+        <Button mnemonicParsing="false" onAction="#buttonPlusClic" text="+" GridPane.columnIndex="3"
+                GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+        <Button mnemonicParsing="false" onAction="#buttonMinusClic" text="-" GridPane.columnIndex="3"
+                GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
+        <Button mnemonicParsing="false" onAction="#buttonMultipleClic" text="*" GridPane.columnIndex="3"
+                GridPane.halignment="CENTER" GridPane.rowIndex="3"/>
+        <Button mnemonicParsing="false" onAction="#buttonDivideClic" text="/" GridPane.columnIndex="3"
+                GridPane.halignment="CENTER" GridPane.rowIndex="4"/>
+        <Button mnemonicParsing="false" onAction="#buttonSuppClic" text="sup" GridPane.columnIndex="4"
+                GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+        <Button mnemonicParsing="false" onAction="#buttonCleanClic" text="A/C" GridPane.columnIndex="4"
+                GridPane.halignment="CENTER" GridPane.rowIndex="2"/>
+    </GridPane>
 </VBox>
