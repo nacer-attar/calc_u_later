@@ -4,113 +4,146 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 public class FrontController {
+    @FXML
     public Label litExp;
+
     public String txt = "";
-    public char last_input;
+    public String memory = "";
+    public String numbers = "0123546789";
+
     public void button0Clic() {
-        this.txt += "0";
+        txt += "0";
         litExp.setText(txt);
-        this.last_input = '0';
     }
 
     public void button1Clic() {
-        this.txt += "1";
+        txt += "1";
         litExp.setText(txt);
-        this.last_input = '1';
     }
 
     public void button2Clic() {
-        this.txt += "2";
+        txt += "2";
         litExp.setText(txt);
-        this.last_input = '2';
     }
 
     public void button3Clic() {
-        this.txt += "3";
+        txt += "3";
         litExp.setText(txt);
-        this.last_input = '3';
     }
 
     public void button4Clic() {
-        this.txt += "4";
+        txt += "4";
         litExp.setText(txt);
-        this.last_input = '4';
     }
 
     public void button5Clic() {
-        this.txt += "5";
+        txt += "5";
         litExp.setText(txt);
-        this.last_input = '5';
     }
 
     public void button6Clic() {
-        this.txt += "6";
+        txt += "6";
         litExp.setText(txt);
-        this.last_input = '6';
     }
 
     public void button7Clic() {
-        this.txt += "7";
+        txt += "7";
         litExp.setText(txt);
-        this.last_input = '7';
     }
 
     public void button8Clic() {
-        this.txt += "8";
+        txt += "8";
         litExp.setText(txt);
-        this.last_input = '8';
     }
 
     public void button9Clic() {
-        this.txt += "9";
+        txt += "9";
         litExp.setText(txt);
-        this.last_input = '9';
     }
 
     public void buttonDotClic() {
-        this.txt += ".";
-        litExp.setText(txt);
-        this.last_input = '.';
+        if (txt.length() != 0) {
+            if (numbers.contains(String.valueOf(txt.charAt(txt.length() - 1)))) {
+                txt += ".";
+                litExp.setText(txt);
+            }
+        }
     }
 
     public void buttonPlusClic() {
-        this.txt += " + ";
-        litExp.setText(txt);
-        this.last_input = '+';
+        if (txt.length() != 0) {
+            if (numbers.contains(String.valueOf(txt.charAt(txt.length() - 1)))) {
+                txt += " + ";
+                litExp.setText(txt);
+            }
+        }
     }
 
     public void buttonMinusClic() {
-        this.txt += " - ";
-        litExp.setText(txt);
-        this.last_input = '-';
+        if (txt.length() != 0) {
+            if (numbers.contains(String.valueOf(txt.charAt(txt.length() - 1)))) {
+                txt += " - ";
+                litExp.setText(txt);
+            }
+        }
     }
 
     public void buttonMultipleClic() {
-        this.txt += " * ";
-        litExp.setText(txt);
-        this.last_input = '*';
+        if (txt.length() != 0) {
+            if (numbers.contains(String.valueOf(txt.charAt(txt.length() - 1)))) {
+                txt += " * ";
+                litExp.setText(txt);
+            }
+        }
     }
-
     public void buttonDivideClic() {
-        this.txt += " / ";
-        litExp.setText(txt);
-        this.last_input = '/';
+        if (txt.length() != 0) {
+            if (numbers.contains(String.valueOf(txt.charAt(txt.length() - 1)))) {
+                txt += " / ";
+                litExp.setText(txt);
+            }
+        }
     }
 
     public void buttonSuppClic() {
-        if (this.txt.length() != 0) {
-            if (this.txt.charAt(this.txt.length() - 1) == ' ')
-                this.txt = this.txt.substring(0, this.txt.length() - 3);
+        if (txt.length() != 0) {
+            if (txt.charAt(txt.length() - 1) == ' ')
+                txt = txt.substring(0, txt.length() - 3);
             else
-                this.txt = this.txt.substring(0, this.txt.length() - 1);
+                txt = txt.substring(0, txt.length() - 1);
             litExp.setText(txt);
         }
-        this.last_input = 'X';
     }
 
     public void buttonCleanClic() {
-        this.txt = "";
+        txt = "";
         litExp.setText(txt);
-        this.last_input = 'C';
+    }
+
+    public void buttonResusClic() {
+        if (txt.length() == 0) {
+            txt += "-";
+            litExp.setText(txt);
+        }
+        else if (txt.charAt(txt.length() - 1) == ' ') {
+            txt += "-";
+            litExp.setText(txt);
+        }
+    }
+
+    public void buttonEqualClic() {
+        System.out.println("yoyoyoyo");
+    }
+    public void buttonMemoryAdd() {
+        memory = txt;
+    }
+
+    public void buttonMemoryDrop() {
+        txt += memory;
+        litExp.setText(txt);
+    }
+
+    public void buttonMemoryDelete(){
+        memory = "";
     }
 }
